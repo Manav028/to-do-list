@@ -70,12 +70,40 @@
 
 /*to-do-list*/
 
+.to-do-list{
+    margin: 10px 0px 30px 0px;
+}
+
 .task-list-li{
-    padding: 0px 20px 10px 50px;
+    padding: 0px 20px 15px 50px;
     list-style: none;
+    position: relative;
 }
 
 .task-list-li::before{
+    position: absolute;
     content: '';
     background-image: url("images/checked.png") ;
+    height: 28px;
+    width: 28px;
+    background-size: contain;
+    left: 15px;
+    border-radius: 50%;
+}
+
+.task-list-li::after{
+    position: absolute;
+    content: '';
+    background-image: url("images/unchecked.png") ;
+    height: 28px;
+    width: 28px;
+    background-size: contain;
+    right: 15px;
+    top: 0px;
+    border-radius: 50%; 
+}
+
+.checked{
+    color: #555;
+    text-decoration: line-through;
 }
