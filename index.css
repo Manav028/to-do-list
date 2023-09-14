@@ -72,10 +72,17 @@
 
 .to-do-list{
     margin: 10px 0px 30px 0px;
+    width: 100%;
+}
+
+.task-list-ul{
+    width: 100%;
+    flex-direction: column;
 }
 
 .task-list-li{
-    padding: 0px 20px 15px 50px;
+    width: 70%;
+    padding: 0px 20px 15px 10px;
     list-style: none;
     position: relative;
 }
@@ -83,27 +90,47 @@
 .task-list-li::before{
     position: absolute;
     content: '';
-    background-image: url("images/checked.png") ;
-    height: 28px;
-    width: 28px;
+    background-image: url("images/unchecked.png") ;
+    height: 25px;
+    width: 25px;
     background-size: contain;
-    left: 15px;
+    left: -30px;
+    top: 0px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.task-list-li span{
+    position: absolute;
+    right: -30px;
+    width: 30px;
+    height: 30px;
+    font-size: 40px;
+    line-height: 25px;
+    top: -2px;
+    text-align: center;
     border-radius: 50%;
 }
 
-.task-list-li::after{
-    position: absolute;
-    content: '';
-    background-image: url("images/unchecked.png") ;
-    height: 28px;
-    width: 28px;
-    background-size: contain;
-    right: 15px;
-    top: 0px;
-    border-radius: 50%; 
+.task-list-li span:hover{
+    background: #edeef0;
+    cursor: pointer;
 }
 
 .checked{
     color: #555;
     text-decoration: line-through;
+}
+
+.checkedimg::before{
+    position: absolute;
+    content: '';
+    background-image: url("images/checked.png") ;
+    height: 25px;
+    width: 25px;
+    background-size: contain;
+    left: -30px;
+    top: 0px;
+    border-radius: 50%;
+    cursor: pointer;
 }
